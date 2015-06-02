@@ -22,7 +22,7 @@
             <li><a href="./musique.php">Musique</a></li>
             <li><a href="./evenement.php">Evenement</a></li>
           <li><a href="./casting2.php">Casting</a></li>
-        <li><a href="#">Spectacle</a></li>
+          <li><a href="./boutique.php">Boutique</a></li>
         </ul>
         <ul class="nav navbar-right navbar-nav">
           <li class="dropdown">
