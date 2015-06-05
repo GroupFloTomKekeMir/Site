@@ -7,6 +7,7 @@ include('../php/connexionBdd.php');
         <title>Boutique</title>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <meta charset="utf-8">
+        <script src="../js/boutique.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="test"></div>
@@ -49,31 +50,3 @@ include('../php/connexionBdd.php');
 </html>
 
 
-<script>
-
-    $(document).ready(function () {
-
-
-
-        $(".ajouter").click(function () {
-            
-            var id = $(this).val();
-
-
-            $.ajax({
-                method: "GET",
-                url: "../php/ajouterArticle.php",
-                data: {id: id},
-                dataType: 'html',
-                success: function (data) {
-
-                    $("#test").html(data);
-                }
-
-            });
-
-        })
-    });
-
-
-</script>

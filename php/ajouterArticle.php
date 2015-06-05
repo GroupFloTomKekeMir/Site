@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include('connexionBdd.php');
 $id = $_GET['id'];
@@ -24,7 +25,7 @@ try {
 
 $select['id'] = $id;
 if (!isset($_SESSION['panier'])) {
-echo "bonjour";
+
     $_SESSION['panier'] = array();
     $_SESSION['panier']['id_article'] = array();
     $_SESSION['panier']['nom'] = array();
@@ -37,5 +38,5 @@ array_push($_SESSION['panier']['nom'], $select['nom']);
 array_push($_SESSION['panier']['description'], $select['description']);
 array_push($_SESSION['panier']['prix'], $select['prix']);
 
-echo var_dump($_SESSION['panier']);
+echo "Article ajouté";
 ?>

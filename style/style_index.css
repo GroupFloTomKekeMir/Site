@@ -1,7 +1,7 @@
 
 
 .navbar-form input, .form-inline input {
-	width:auto;
+    width:auto;
 }
 
 /* end */
@@ -9,50 +9,99 @@
 /* custom theme */
 
 header {
-	min-height:230px;
-  	margin-bottom:5px;
+    min-height:230px;
+    margin-bottom:5px;
 }
 
 @media (min-width: 979px) {
-  #sidebar.affix-top {
-      position: static;
-  }
-  
-  #sidebar.affix {
-      position: fixed;
-      top: 0;
-      width:21.2%;
-  }
+    #sidebar.affix-top {
+        position: static;
+    }
+
+    #sidebar.affix {
+        position: fixed;
+        top: 0;
+        width:21.2%;
+    }
 }
 
+colonne{
+    border-right-style: solid;
+    border-right-color: red;
+}
 
+.titreProfil{
+    text-align: center;
+}
+
+.large{
+    text-align: center;
+}
+
+.corpsProfil{
+    background-color: #fff;
+    padding:10px;
+}
+
+.corpsProfil2{
+    background-color: #fff;
+    
+
+}
+
+.casting{
+    margin-top: 25px;
+}
+
+.titreMusique{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rechercheMusique{
+    background-color: #fff; 
+}
+
+.corpsMusique{
+    background-color: #fff;
+    margin: 3px;
+    padding: 10px;
+}
+
+traitMusique{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ff3333;
+    height: 1px;
+}
 
 .navbar {
-	background-color:#ff3333;
-  	color:#ffffff;
+    background-color:#ff3333;
+    color:#ffffff;
     border:0;
-  	border-radius:0;
+    border-radius:0;
 }
 .navbar-nav > li > a {
-  	color:#fff;
-  	padding-left:20px;
-  	padding-right:20px;
-  	border-left:1px solid #ee3333;
+    color:#fff;
+    padding-left:20px;
+    padding-right:20px;
+    border-left:1px solid #ee3333;
 }
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
     color:#666666; 
 }
 .navbar-nav > li:last-child > a {
-  	border-right:1px solid #ee3333;
+    border-right:1px solid #ee3333;
 }
 .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
     color: #ffffff;
-	background-color:transparent;
+    background-color:transparent;
+
 }
 .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
-	color: #f0f0f0;
-	background-color:transparent;
-  	opacity:.9;
+    color: #f0f0f0;
+    background-color:transparent;
+    opacity:.9;
     border-color:#ff3333;
 }
 
@@ -63,15 +112,44 @@ header {
 
 
 .navbar-toggle {
-	color:#fff;
+    color:#fff;
     border-width:0;
 }
-  
+
 .navbar-toggle:hover {
-	background-color:#fff;
+    background-color:#fff;
 }
 
 body {
     background-color: #eee;
+}
+
+.detailCasting{
+    border-radius: 5px;
+    padding : 10px;
+    //margin-top: 10px;
+    //margin-bottom: 10px;
+    //background-color: #fff;
+    list-style-type:none;
+    text-align: left;
+}
+
+.trait{
+    margin-top: 20px;
+    background-color: #ff3333;
+    height: 1px;
+}
+
+.traitEvenement{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ff3333;
+    height: 1px;
+}
+
+iframe{
+    width: 270px;
+    height: 190px;
+    margin-left: 0px;
 }
 

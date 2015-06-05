@@ -5,10 +5,11 @@ include('header.php');
 include('../php/connexionBdd.php');
 
 
-$id_metier = $_GET['id_metier'];
+$offre = $_POST['offre_recherche'];
 
-$query = $bdd->prepare('select id_offre , titre , reference , date_debut_publi , fin_publi , nbr_poste , descr_poste , descr_profil, duree_contrat , offre.id_contrat, contrat.libelle as nom_contrat, id_annonceur , diffuseur.id_diffuseur, metier.libelle as nom_metier, diffuseur.nom as nom_diffuseur FROM offre INNER JOIN contrat ON contrat.id_contrat = offre.id_contrat INNER JOIN metier ON metier.id_metier = offre.id_metier INNER JOIN diffuseur ON diffuseur.id_diffuseur = offre.id_diffuseur WHERE metier.id_metier = ?');
-$query->execute(array($id_metier));
+
+$query = $bdd->prepare('SELECT `id_offre`, `titre`, `reference`, `date_debut_publi`, `fin_publi`, `nbr_poste`, `descr_poste`, `descr_profil`, `duree_contrat`,contrat.libelle as contrat, annonceur.nom as annonceur, diffuseur.nom as diffuseur, metier.libelle as metier FROM `offre` INNER JOIN contrat ON contrat.id_contrat = offre.id_contrat INNER JOIN annonceur ON annonceur.id_annonceur = offre.id_annonceur INNER JOIN diffuseur ON diffuseur.id_diffuseur = offre.id_diffuseur INNER JOIN metier ON metier.id_metier = offre.id_metier WHERE `titre` LIKE ?');
+$query->execute(array('%' . $offre . '%'));
 
 while ($row = $query->fetch()) {
     ?>
@@ -29,7 +30,7 @@ while ($row = $query->fetch()) {
                         <p>Métier </p>
                     </div>
                     <div class="col-lg-offset-1 col-lg-7">
-                        <p><?php echo $row['nom_metier'] ?></p>
+                        <p><?php echo $row['metier'] ?></p>
                     </div>                    
                 </div>
                 <div class="row">
@@ -37,7 +38,7 @@ while ($row = $query->fetch()) {
                         <p>Contrat </p>
                     </div>
                     <div class="col-lg-offset-1 col-lg-7">
-                        <p><?php echo $row['nom_contrat'] ?></p>
+                        <p><?php echo $row['contrat'] ?></p>
                     </div>                    
                 </div>
                 <div class="row">
@@ -74,10 +75,10 @@ while ($row = $query->fetch()) {
                 </div>
                 <div class="row">
                     <div class="col-lg-offset-1 col-lg-2">
-                        <p>Diffuseur </p>
+                        <p>Annonceur </p>
                     </div>
                     <div class="col-lg-offset-1 col-lg-7">
-                        <p><?php echo $row['nom_diffuseur'] ?></p>
+                        <p><?php echo $row['annonceur'] ?></p>
                     </div>                    
                 </div>
 
@@ -96,8 +97,4 @@ while ($row = $query->fetch()) {
     <?php
 }
 ?>
-
-
-
-
 
