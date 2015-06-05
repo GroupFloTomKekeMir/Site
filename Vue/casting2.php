@@ -24,7 +24,7 @@ include('../php/connexionBdd.php');
                             <h3 id="<?php echo $row['id_metier']; ?>"><?php echo $row['libelle']; ?></h3>
                             <p>Découvrez toutes les annonces pour les <?php echo $row['libelle']; ?></p>
                             <p>Il y a <?php echo $row2['count(id_metier)']; ?> annonces</p>           
-                            <p><a href="./offre.php?id_metier=<?php echo $row['id_metier']; ?>" class="btn btn-primary" role="button">En savoir plus</a></p>
+                            <p><a href="./offre.php?id_metier=<?php echo $row['id_metier']; ?>" class="btn btn-danger" role="button">En savoir plus</a></p>
                         </div>
                     </div>
 

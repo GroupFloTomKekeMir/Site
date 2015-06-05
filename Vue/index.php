@@ -49,13 +49,13 @@ include('../php/connexionBdd.php');
         if (isset($_SESSION['id'])) {
             $id = $_SESSION['id'];
             ?> 
-    <?php if ($id == 2) { ?>
+            <?php if ($id == 2) { ?>
                 <form method="post" action="./creernews.php">
-                    <button>Creer une news</button>
+                    <button class="btn-small btn-danger btn">Créer une news</button>
                 </form>
-                    <?php } ?>
-                <?php }
-                ?>
+            <?php } ?>
+        <?php }
+        ?>
         <div class="col col-sm-9">
             <div class="panel">
                 <?php
@@ -65,7 +65,7 @@ include('../php/connexionBdd.php');
                     ?>
                     <h1 id="titre"><?php echo $row['titre'] ?></h1>
                     <div id="contenu"><?php echo $row['contenu'] ?></div>
-<?php } ?>
+                <?php } ?>
             </div>
         </div>
     </div>

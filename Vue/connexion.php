@@ -11,7 +11,7 @@
             <div class="col-lg-5">
                 <div class="row">
                     <div class="col-lg-offset-10 col-lg-2">
-                        <h1> Connexion : </h1>
+                        <h1> Connexion</h1>
                     </div>
                 </div>
             </div>

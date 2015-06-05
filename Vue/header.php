@@ -20,9 +20,9 @@
                 <div class="nav-collapse collase">
                     <ul class="nav navbar-nav">  
                         <li><img src="../style/petitLogo.png" height='50' width='55'></li>
-                        <li><a href="./index.php"><i class="glyphicon glyphicon-home"></i>  Megacasting</a></li>
+                        <li><a href="./index.php"><i class="glyphicon glyphicon-home"></i>    Megacasting</a></li>
                         <li><a href="./musique.php">Musique</a></li>
-                        <li><a href="./evenement.php">Evenement</a></li>
+                        <li><a href="./evenement.php">Évènement</a></li>
                         <li><a href="./casting2.php">Casting</a></li>
                         <li><a href="./boutique.php">Boutique</a></li>
                     </ul>
@@ -45,7 +45,7 @@
                                 <?php } else { ?>
                                     <li><a id="profil" href="./profil.php">Profil</a></li>
                                     <li><a id="panier" href="./panier.php">Panier</a></li>
-                                    <li><a id="deco2" href="#">Deconnexion</a></li>
+                                    <li><a id="deco2" href="#">Déconnexion</a></li>
 
                                 <?php } ?>
                             </ul>

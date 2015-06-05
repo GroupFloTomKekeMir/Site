@@ -84,7 +84,7 @@ while ($row = $query->fetch()) {
                 <div class="row">
                     <div class="col-lg-offset-1 col-lg-2">
                         <?php if (isset($_SESSION['id'])) { ?>
-                            <button class="postuler" value="<?php echo $row['id_offre'] ?>">Postuler</button>
+                            <button class="postuler btn-small btn-danger btn"  value="<?php echo $row['id_offre'] ?>">Postuler</button>
                         <?php } ?>
                     </div>
                 </div>

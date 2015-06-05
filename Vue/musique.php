@@ -1,5 +1,7 @@
 <?php include('header.php'); ?>
 <?php include('../php/connexionBdd.php'); ?>
+<link href="../style/style_index.css" rel="stylesheet" type="text/css"/>
+
 <html>
     <head>
         <title>Musique</title>
@@ -24,7 +26,7 @@
                             <input type="text" id="recherche_artiste" name="recherche_artiste"/>                 
                         </div>  
                         <div class="col-lg-offset-2 col-lg-1">
-                            <input type="submit" id="submit" name="submit" value="Rechercher" />                 
+                            <button type="submit" id="submit" name="submit" class="btn-small btn-danger btn-small" value="Rechercher">Rechercher</button>
                         </div> 
                     </form>            
                 </div>
@@ -36,15 +38,15 @@
                         <div class="col-lg-1">
                             <input type="text" id="recherche_titre" name="recherche_titre"/>                 
                         </div> 
-                        <div class="col-lg-offset-2 col-lg-1">
-                            <input type="submit" id="submit" name="submit2" value="Rechercher" />                 
+                        <div class="col-lg-offset-2 col-lg-1">   
+                            <button type="submit" id="submit" name="submit2" class="btn-small btn-danger btn-small" value="Rechercher">Rechercher</button>
                         </div> 
                     </form> 
                 </div>        
             </div>
         </div>
         <br/>
-        <div class="container" style="background-color : red;">
+        <div class="container">
 
             <?php
             $query = $bdd->prepare('SELECT `id_musique`, `titre`, `description`, `genre`, `date_ajout`, `lien_yt`, `id_utilisateur`, nom_artiste FROM `musique`, utilisateur WHERE utilisateur.id_util = musique.id_utilisateur');
@@ -54,13 +56,13 @@
                 ?>  
 
 
-                <div class="row corpsMusique">
+                <div class="row corpsMusique bordureMusique">
                     <div class="col-lg-offset-2 col-lg-3">
                         <iframe src="https://<?php echo $row['lien_yt'] ?>" frameborder="0" allowfullscreen></iframe>
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="row">           
+                        <div class="row">
                             <div class="col-lg-offset-1 col-lg-10">
                                 <p><?php echo $row['titre'] ?></p>
                             </div>                    
@@ -70,7 +72,7 @@
                                 <p>#<?php echo $row['genre'] ?></p>
                             </div>                    
                         </div>
-                        <div class="row">
+                        <div class="row ">
                             <div class="col-lg-offset-1 col-lg-10">
                                 <p><?php echo $row['description'] ?></p>
                             </div>                    
@@ -82,7 +84,7 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-offset-1 col-lg-10">
-                                <p>Date d'ajoût : <?php echo $row['date_ajout'] ?></p>
+                                <p>Date d'ajout : <?php echo $row['date_ajout'] ?></p>
                             </div>                    
                         </div>
 

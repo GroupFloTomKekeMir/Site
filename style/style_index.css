@@ -30,7 +30,7 @@ colonne{
     border-right-color: red;
 }
 
-.titreProfil{
+.titreProfil, .corpProfil, .piedProfil{
     text-align: center;
 }
 
@@ -45,8 +45,6 @@ colonne{
 
 .corpsProfil2{
     background-color: #fff;
-    
-
 }
 
 .casting{
@@ -80,12 +78,14 @@ traitMusique{
     color:#ffffff;
     border:0;
     border-radius:0;
+    
 }
 .navbar-nav > li > a {
     color:#fff;
     padding-left:20px;
     padding-right:20px;
     border-left:1px solid #ee3333;
+    transition: .5s;
 }
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
     color:#666666; 
@@ -153,3 +153,26 @@ iframe{
     margin-left: 0px;
 }
 
+#contenu {
+    width: 300px;
+    height: 100px;
+}
+
+.bordureMusique {
+    border-bottom: 3px red solid;
+}
+
+.nomPanier {
+    font-weight : bold;
+    font-size : 1.2em;
+    width : 100px;
+    margin-bottom: 10px;
+}
+
+.panier{
+    font-size : 2.5em;
+    font-weight : bold;
+    text-align : center;
+    margin-top : 20px;
+    margin-bottom : 20px;
+}

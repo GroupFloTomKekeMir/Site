@@ -33,7 +33,7 @@ include('../php/connexionBdd.php');
                                     <p id="prix" value="<?php echo $row['prix']; ?>">Prix : <?php echo $row['prix']; ?>€</p>           
                                     <p>
 
-                                        <button class="ajouter" value="<?php echo $row['id_article']; ?>">Ajouter au panier</button>
+                                        <button class="ajouter btn-small btn-danger btn" value="<?php echo $row['id_article']; ?>">Ajouter au panier</button>
 
                                     </p>
                                 </div>

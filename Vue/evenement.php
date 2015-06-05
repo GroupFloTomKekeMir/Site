@@ -27,7 +27,7 @@
 
                 <div class="row">
                     <div class="col-lg-offset-4 col-lg-4 ">
-                        <button class="eve" value="<?php echo $row['id_evenement'] ?>">Voir</button>
+                        <button class="eve btn-small btn-danger btn" value="<?php echo $row['id_evenement'] ?>">Voir</button>
                     </div>
                 </div> 
 

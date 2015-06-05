@@ -122,7 +122,7 @@
                     <br/><br/><br/>
                     <div class="row">
                         <div class="col-lg-offset-5 col-lg-2 large">
-                            <button class="valider">Valider</button>
+                            <button class="valider btn-small btn-danger btn">Valider</button>
                         </div>
 
                     </div>
